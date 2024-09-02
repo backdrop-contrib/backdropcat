@@ -1,0 +1,66 @@
+<?php
+/**
+ * @file
+ * Install, update and uninstall functions for the Backdropcat module.
+ */
+
+/**
+ * Implements hook_uninstall().
+ */
+function backdropcat_uninstall() {
+  $config = config('backdropcat.settings');
+  $config->delete();
+
+}
+
+/**
+ * Implements hook_enable().
+ */
+function backdropcat_enable() {
+  $backdropcat_config = config('backdropcat.settings');
+  config_set('user.mail', 'cancel_confirm_body', $backdropcat_config->get('cancel_confirm_body'));
+  config_set('user.mail', 'cancel_confirm_subject', $backdropcat_config->get('cancel_confirm_subject'));
+  config_set('user.mail', 'password_reset_body', $backdropcat_config->get('password_reset_body'));
+  config_set('user.mail', 'password_reset_subject', $backdropcat_config->get('password_reset_subject'));
+  config_set('user.mail', 'register_admin_created_body', $backdropcat_config->get('register_admin_created_body'));
+  config_set('user.mail', 'register_admin_created_subject', $backdropcat_config->get('register_admin_created_subject'));
+  config_set('user.mail', 'register_no_approval_required_body', $backdropcat_config->get('register_no_approval_required_body'));
+  config_set('user.mail', 'register_no_approval_required_subject', $backdropcat_config->get('register_no_approval_required_subject'));
+  config_set('user.mail', 'register_pending_approval_body', $backdropcat_config->get('register_pending_approval_body'));
+  config_set('user.mail', 'register_pending_approval_subject', $backdropcat_config->get('register_pending_approval_subject'));
+  config_set('user.mail', 'register_pending_approval_admin_body', $backdropcat_config->get('register_pending_approval_admin_body'));
+  config_set('user.mail', 'register_pending_approval_admin_subject', $backdropcat_config->get('register_pending_approval_admin_subject'));
+  config_set('user.mail', 'status_activated_body', $backdropcat_config->get('status_activated_body'));
+  config_set('user.mail', 'status_activated_subject', $backdropcat_config->get('status_activated_subject'));
+  config_set('user.mail', 'status_blocked_body', $backdropcat_config->get('status_blocked_body'));
+  config_set('user.mail', 'status_blocked_subject', $backdropcat_config->get('status_blocked_subject'));
+  config_set('user.mail', 'status_canceled_body', $backdropcat_config->get('status_canceled_body'));
+  config_set('user.mail', 'status_canceled_subject', $backdropcat_config->get('status_canceled_subject'));
+  config_set('system.core', 'maintenance_mode_message', $backdropcat_config->get('maintenance_mode_message'));
+  config_set('system.core', 'anonymous', $backdropcat_config->get('roles.anonymous.label'));
+  config_set('system.date', 'formats', $backdropcat_config->get('formats'));
+  config_set('user.role.administrator', 'label', $backdropcat_config->get('roles.administrator.label'));
+  config_set('user.role.administrator', 'description', $backdropcat_config->get('roles.administrator.description'));
+  config_set('user.role.anonymous', 'label', $backdropcat_config->get('roles.anonymous.label'));
+  config_set('user.role.anonymous', 'description', $backdropcat_config->get('roles.anonymous.description'));
+  config_set('user.role.authenticated', 'label', $backdropcat_config->get('roles.authenticated.label'));
+  config_set('user.role.authenticated', 'description', $backdropcat_config->get('roles.authenticated.description'));
+  config_set('user.role.editor', 'label', $backdropcat_config->get('roles.editor.label'));
+  config_set('user.role.editor', 'description', $backdropcat_config->get('roles.editor.description'));
+  config_set('views.view.comments_recent', 'description', $backdropcat_config->get('views.comments_recent.description'));
+  config_set('views.view.comments_recent', 'human_name', $backdropcat_config->get('views.comments_recent.human_name'));
+  config_set('views.view.file_admin', 'description', $backdropcat_config->get('views.file_admin.description'));
+  config_set('views.view.file_admin', 'human_name', $backdropcat_config->get('views.file_admin.human_name'));
+  config_set('views.view.image_library', 'description', $backdropcat_config->get('views.image_library.description'));
+  config_set('views.view.image_library', 'human_name', $backdropcat_config->get('views.image_library.human_name'));
+  config_set('views.view.node_admin_content', 'description', $backdropcat_config->get('views.node_admin_content.description'));
+  config_set('views.view.node_admin_content', 'human_name', $backdropcat_config->get('views.node_admin_content.human_name'));
+  config_set('views.view.promoted_cards', 'description', $backdropcat_config->get('views.promoted_cards.description'));
+  config_set('views.view.promoted_cards', 'human_name', $backdropcat_config->get('views.promoted_cards.human_name'));
+  config_set('views.view.promoted', 'description', $backdropcat_config->get('views.promoted.description'));
+  config_set('views.view.promoted', 'human_name', $backdropcat_config->get('views.promoted.human_name'));
+  config_set('views.view.taxonomy_term', 'description', $backdropcat_config->get('views.taxonomy_term.description'));
+  config_set('views.view.taxonomy_term', 'human_name', $backdropcat_config->get('views.taxonomy_term.human_name'));
+  config_set('views.view.user_admin', 'description', $backdropcat_config->get('views.user_admin.description'));
+  config_set('views.view.user_admin', 'human_name', $backdropcat_config->get('views.user_admin.human_name'));
+}

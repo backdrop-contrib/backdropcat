@@ -1,0 +1,9 @@
+name = Backdropcat
+description = It translates core configs files into Catalan and some other utilities for sites with Catalan as main language.
+package = Translation
+tags[] = Language
+type = module
+backdrop = 1.x
+
+
+configure = admin/config/system/backdropcat

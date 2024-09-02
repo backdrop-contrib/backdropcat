@@ -1,0 +1,72 @@
+<?php
+
+/**
+ * @file backdropcat.module
+ */
+
+/**
+ * Implements hook_config_info().
+ */
+function backdropcat_config_info() {
+  $prefixes['antiscan.settings'] = array(
+    'label' => t('Backdropcat'),
+    'group' => t('Configuration'),
+  );
+  return $prefixes;
+}
+
+/**
+ * Implements hook_permission().
+ *
+ */
+function backdropcat_permission() {
+  return array(
+    'backdropcat settings' => array(
+      'title' => t('Administer Backdropcat settings')
+    ),
+  );
+}
+
+
+/**
+ * Implements hook_menu().
+ *
+ */
+function backdropcat_menu() {
+  $items = array();
+
+  $items['admin/config/system/backdropcat'] = array(
+    'type' => MENU_NORMAL_ITEM,
+    'title' => 'Backdropcat',
+    'description' => 'Catalan backdrop sites configurations.',
+    'page callback' => 'backdrop_get_form',
+    'page arguments' => array('backdropcat_form'),
+    'access arguments' => array('backdropcat settings'),
+    'file' => 'backdropcat.admin.inc',
+  );
+  return $items;
+}
+
+
+/**
+ * Implements hook_block_view_alter().
+ *
+ */
+function backdropcat_block_view_alter(&$data, $block) {
+
+  if ($block->delta == "powered-by") {
+    if (config_get("backdropcat.settings", "url_update")) {
+      $markup = $data['content']['#markup'];
+      $new_url = config_get("backdropcat.settings", "url");
+      // Replace the old URL with the new URL
+      $updated_markup = str_replace('https://backdropcms.org', $new_url, $markup);
+      $data['content']['#markup'] = $updated_markup;
+    }
+  }
+}
+
+
+function backdropcat_form_user_settings_email_alter(&$form, &$form_state, $form_id) {
+  $form['email_cancel_confirm']['user_mail_cancel_confirm_body']['#rows'] = 15;
+  $form['email_canceled']['settings']['user_mail_status_canceled_body']['#rows'] = 6;
+}

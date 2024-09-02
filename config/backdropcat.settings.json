@@ -1,0 +1,139 @@
+{
+    "url_update": 0,
+    "url": "https://backdrop.cat",
+    "cancel_confirm_body": "[user:name],\n\nS'ha fet una sol·licitud per cancel·lar el vostre compte a [site:name].\n\nAra podeu cancel·lar el vostre compte a [site:url:brief] fent clic en aquest enllaç o copiant-lo i enganxant-lo al vostre navegador:\n\n[user:cancel-url]\n\nNOTA: La cancel·lació del vostre compte no és reversible.\n\nAquest enllaç caduca en un dia i no passarà res si no s'utilitza.\n\n-- [site:name]",
+    "cancel_confirm_subject": "Sol·licitud de cancel·lació del compte per a [user:name] a [site:name]",
+    "password_reset_body": "[user:name],\n\nS'ha fet una sol·licitud per restablir la contrasenya del vostre compte a [site:name].\n\nPodeu reiniciar la vostra contrasenya fent clic en aquest enllaç o copiant-la i enganxant-la al vostre navegador:\n\n[user:one-time-login-url]\n\nAquest enllaç només es pot utilitzar una vegada i us portarà a una pàgina on podreu establir la contrasenya. Caduca al cap d'un dia i no passarà res si no s'utilitza.\n\n-- [site:name]",
+    "password_reset_subject": "Informació de restabliment de contrasenya per a [user:name] a [site:name]",
+    "register_admin_created_body": "[user:name],\n\nUn administrador del lloc a [site:name] us ha creat un compte. Ara podeu iniciar sessió fent clic a aquest enllaç o copiant-lo i enganxant-lo al vostre navegador:\n\n[user:one-time-login-url]\n\nAquest enllaç només es pot utilitzar una vegada per iniciar la sessió i us portarà a una pàgina on podeu establir la vostra contrasenya.\n\nDesprés d'establir la vostra contrasenya, podreu iniciar sessió a [site:login-url] en el futur mitjançant:\n\nnom d'usuari: [user:name]\ncontrasenya: la teva contrasenya\n\n--  [site:name]",
+    "register_admin_created_subject": "Un administrador del lloc a [site:name] us ha creat un compte",
+    "register_no_approval_required_body": "[user:name],\n\nGràcies per registrar-vos a [site:name]. Ara podeu iniciar sessió fent clic en aquest enllaç o copiar-lo i enganxar-lo al vostre navegador:\n\n[user:one-time-login-url]\n\nAquest enllaç només es pot utilitzar una vegada per iniciar sessió i us portarà a una pàgina on podreu establir la contrasenya.\n\nDesprés d'establir la contrasenya, podreu iniciar sessió a [site:login-url] en el futur utilitzant:\n\nnom d'usuari: [user:name]\ncontrasenya: la vostra contrasenya\n\n-- [site:name]",
+    "register_no_approval_required_subject": "Detalls del compte de [user:name] a [site:name]",
+    "register_pending_approval_body": "[user:name],\n\nGràcies per registrar-vos a [site:name]. La sol·licitud d'un compte està pendent d'aprovació. Un cop aprovat, rebreu un altre correu electrònic amb informació sobre com iniciar sessió, establir la contrasenya i altres detalls.\n\n-- [site:name]",
+    "register_pending_approval_subject": "Detalls del compte [user:name] a [site:name] (pendent d'aprovació administrativa))",
+    "register_pending_approval_admin_body": "[user:name] ha sol·licitat un compte.\n\n[user:edit-url]",
+    "register_pending_approval_admin_subject": "Nou compte de [user:name] a [site:name] (pendent d'aprovació)",
+    "status_activated_body": "[user:name],\n\nS'ha activat el vostre compte a [site:name].\n\nAra podeu iniciar sessió fent clic en aquest enllaç o copiar-lo i enganxar-lo al vostre navegador:\n\n[user:one-time-login-url]\n\nAquest enllaç només es pot utilitzar una vegada per iniciar sessió i us portarà a una pàgina on podreu establir la contrasenya.\n\nDesprés d'establir la contrasenya, podreu iniciar sessió a [site:login-url] en el futur utilitzant:\n\nnom d'usuari: [user:name]\ncontrasenya: la vostra contrasenya\n\n-- [site:name]",
+    "status_activated_subject": "Detalls del compte per a [user:name] a [site:name] (aprovat)",
+    "status_blocked_body": "[user:name],\n\nS'ha blocat el vostre compte a [site:name].\n\n-- [site:name]",
+    "status_blocked_subject": "Detalls del compte de [user:name] a [site:name] (bloquejat)",
+    "status_canceled_body": "[user:name],\n\nS'ha cancel·lat el vostre compte a [site:name].\n\n-- [site:name]",
+    "status_canceled_subject": "Detalls del compte de [user:name] a [site:name] (cancel·lat)",
+    "maintenance_mode_message": "[site:name] està actualment en manteniment. Hauríem de tornar aviat. Gràcies per la vostra paciència.",
+    "formats": {
+        "long": {
+            "label": "Llarga",
+            "pattern": "l, j F, Y - G:i \\h",
+            "module": "system"
+        },
+        "medium": {
+            "label": "Mitjana",
+            "pattern": "D, d/m/Y - G:i \\h",
+            "module": "system"
+        },
+        "short": {
+            "label": "Curta",
+            "pattern": "d/m/Y - G:i \\h",
+            "module": "system"
+        },
+        "date_only": {
+            "label": "Només data",
+            "pattern": "d/m/Y",
+            "module": "system"
+        },
+        "html_datetime": {
+            "label": "Hora i data HTML",
+            "pattern": "Y/m/d\\TH:i:sO",
+            "module": "system",
+            "hidden": 1
+        },
+        "html_date": {
+            "label": "Data HTML",
+            "pattern": "d/m/Y",
+            "module": "system",
+            "hidden": 1
+        },
+        "html_time": {
+            "label": "Hora HTML",
+            "pattern": "H:i:s",
+            "module": "system",
+            "hidden": 1
+        },
+        "html_yearless_date": {
+            "label": "Data HTML sense any",
+            "pattern": "d/m",
+            "module": "system",
+            "hidden": 1
+        },
+        "html_week": {
+            "label": "Setmana HTML",
+            "pattern": "\\SW/Y",
+            "module": "system",
+            "hidden": 1
+        },
+        "html_month": {
+            "label": "Mes HTML",
+            "pattern": "m/Y",
+            "module": "system",
+            "hidden": 1
+        },
+        "html_year": {
+            "label": "Any HTML",
+            "pattern": "Y",
+            "module": "system",
+            "hidden": 1
+        }
+    },
+    "roles": {
+        "administrator": {
+            "label": "Admin",
+            "description": "Pot gestionar el contingut i la configuració, inclosa la capacitat d'assignar rols."
+        },
+        "anonymous": {
+            "label": "Anònim",
+            "description": "Rol especial assignat a qualsevol visitant del lloc que no hagi iniciat la sessió al lloc."
+        },
+        "authenticated": {
+            "label": "Registrat",
+            "description": "Rol especial assignat a tots els comptes. Els permisos assignats a aquest rol es donen a tots els altres rols excepte el rol anònim."
+        },
+        "editor": {
+            "label": "Editor",
+            "description": "Pot editar la majoria del contingut del lloc, però no pot modificar la configuració del lloc."
+        }
+    },
+    "views": {
+        "comments_recent": {
+            "description": "Conté un bloc i una pàgina per llistar els comentaris recents; el bloc enllaçarà automàticament a la pàgina, la qual mostra el cos del comentari així com un enllaç al node.",
+            "human_name": "Comentaris recents"
+        },
+        "file_admin": {
+            "description": "Llistat administratiu per a la gestió de fitxers.",
+            "human_name": "Administra fitxers"
+        },
+        "image_library": {
+            "description": "Mostra les imatges pujades recentment per a la selecció quan es crea el contingut.",
+            "human_name": "Biblioteca d'imatges"
+        },
+        "node_admin_content": {
+            "description": "Llistat administratiu per a la gestió del contingut.",
+            "human_name": "Administra el contingut"
+        },
+        "promoted_cards": {
+            "description": "Proporciona un bloc de 3 Targetes promocionades. S'utilitza per defecte a la pàgina d'inici.",
+            "human_name": "Targetes promocionades"
+        },
+        "promoted": {
+            "description": "Proporciona una llista de continguts promocionats. S'utilitza per defecte a la pàgina d'inici.",
+            "human_name": "Contingut promocionat"
+        },
+        "taxonomy_term": {
+            "description": "Una vista per emular la gestió de la taxonomia del nucli de Backdrop.",
+            "human_name": "Terme de la taxonomia"
+        },
+        "user_admin": {
+            "description": "Gestiona els comptes d'usuari, els rols i els permisos.",
+            "human_name": "Administra els comptes d'usuari"
+        }
+    }
+}
