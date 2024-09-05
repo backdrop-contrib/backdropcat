@@ -63,4 +63,7 @@ function backdropcat_enable() {
   config_set('views.view.taxonomy_term', 'human_name', $backdropcat_config->get('views.taxonomy_term.human_name'));
   config_set('views.view.user_admin', 'description', $backdropcat_config->get('views.user_admin.description'));
   config_set('views.view.user_admin', 'human_name', $backdropcat_config->get('views.user_admin.human_name'));
+  config_set('filter.format.filtered_html', 'name', $backdropcat_config->get('format.filtered_html.name'));
+  config_set('filter.format.full_html', 'name', $backdropcat_config->get('format.full_html.name'));
+  config_set('filter.format.plain_text', 'name', $backdropcat_config->get('format.plain_text.name'));
 }
