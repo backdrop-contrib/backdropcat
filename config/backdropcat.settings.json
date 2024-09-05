@@ -135,5 +135,16 @@
             "description": "Gestiona els comptes d'usuari, els rols i els permisos.",
             "human_name": "Administra els comptes d'usuari"
         }
+    },
+    "format": {
+        "filtered_html": {
+            "name": "HTML filtrat"
+        },
+        "full_html": {
+            "name": "HTML en brut"
+        },
+        "plain_text": {
+            "name": "Text net"
+        }
     }
 }
