@@ -8,7 +8,7 @@
  * Implements hook_config_info().
  */
 function backdropcat_config_info() {
-  $prefixes['antiscan.settings'] = array(
+  $prefixes['backdropcat.settings'] = array(
     'label' => t('Backdropcat'),
     'group' => t('Configuration'),
   );
